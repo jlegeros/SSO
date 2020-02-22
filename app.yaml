@@ -1,0 +1,17 @@
+#File: 		app.yaml
+#Author:	James LeGeros
+#Company:	----------------------
+#Email:		jlegeros@--------------------.com
+#Summary:	Configuration file
+#			----------- Single Sign On implementation for Google Apps
+
+application: UNQID-tt-sso
+version: 2
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /.*
+  script: tt-sso.application
+  login: required
